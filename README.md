@@ -1,6 +1,6 @@
 # Improved Precision and Recall Metric for Assessing Generative Models 
 
-This project is done as a part of the deep learning interview stage for NAVER Corp. It is mostly based on the [paper](https://arxiv.org/pdf/1904.06991.pdf) with the same name. The paper provides an improved precision and recall metric for General Adversarial Networks(GANs) using a binary function and k-nearest neighbors. The interviewer asked to calculate the precision and recall metric defined in this paper by applying it to two sets of 10000 images from a dataset such as celebA or CIFAR-10, and then explain the precision and recall values alongside in-depth analysis.
+This project is done as a part of the deep learning interview stage for NAVER Corp. It is based on the following [paper](https://arxiv.org/pdf/1904.06991.pdf) which provides an improved precision and recall metric to measure the performance of a General Adversarial Networks(GANs) using k-nearest neighbors. The interviewer asked to calculate the precision and recall metric defined in this paper by applying it to two sets of 10000 images from a dataset such as celebA or CIFAR-10, and then explain the precision and recall values alongside in-depth analysis.
 
 ## Calculation Process
 
@@ -10,7 +10,7 @@ The project contains two Python files.
 
 ### calculate.py
 
-The calculate.py file then extracts the feature vector from the image files using the pretrained model of VGG16. It then estimates the manifold using k-NN neighbors and returns the precision and recall value. The function pretrained_model in calculate.py makes use of the VGG16 from Keras (with additional layers : based on [this thread](https://github.com/keras-team/keras/issues/4465)), which is used to extract feature vectors of each image. Using the feature vectors extracted from this step, the manifold_estimator function tries to estimate the true manifold of of the data using k-neareest neighbors, and returns the fraction value of feature vectors that lie within the estimated manifold. The knn_precision_recall function then calculates the precision and recall value of the real and generated images. These functions were designed by following the pseudo-code provided in Appendix A in the aforementioned [paper](https://arxiv.org/pdf/1904.06991.pdf). 
+The calculate.py file extracts the feature vector from the image files using the pretrained model of VGG16. It then estimates the manifold using k-NN neighbors and returns the precision and recall value. The function pretrained_model in calculate.py makes use of the VGG16 using Keras (with additional layers : based on [this thread](https://github.com/keras-team/keras/issues/4465)), which is used to extract feature vectors of each image. Using the feature vectors extracted from this step, the manifold_estimator function tries to estimate the true manifold of of the data using k-nearest neighbors, and returns the fraction value of feature vectors that lie within the estimated manifold. The knn_precision_recall function then calculates the precision and recall value of the real and generated images. These functions were designed by following the pseudo-code provided in Appendix A in the aforementioned [paper](https://arxiv.org/pdf/1904.06991.pdf). 
 
 ### generate_image.py 
 
