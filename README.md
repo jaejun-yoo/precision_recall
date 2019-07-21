@@ -10,7 +10,7 @@ The project contains two Python files.
 
 ### calculate.py
 
-The calculate.py file extracts the feature vector from the image files using the pretrained model of VGG16. It then estimates the manifold using k-NN neighbors and returns the precision and recall value. The function pretrained_model in calculate.py makes use of the VGG16 using Keras (with additional layers : based on [this thread](https://github.com/keras-team/keras/issues/4465)), which is used to extract feature vectors of each image. Using the feature vectors extracted from this step, the manifold_estimator function tries to estimate the true manifold of of the data using k-nearest neighbors, and returns the fraction value of feature vectors that lie within the estimated manifold. The knn_precision_recall function then calculates the precision and recall value of the real and generated images. These functions were designed by following the pseudo-code provided in Appendix A in the aforementioned [paper](https://arxiv.org/pdf/1904.06991.pdf). 
+The calculate.py file returns the precision and recall values of two image sets. The function pretrained_model in calculate.py makes use of the VGG16 using Keras (with additional layers : based on [this thread](https://github.com/keras-team/keras/issues/4465)), which is used to extract feature vectors of each image. Using the feature vectors extracted from this step, the manifold_estimator function tries to estimate the true manifold of of the data using k-nearest neighbors, and returns the fraction value of feature vectors that lie within the estimated manifold. The knn_precision_recall function then calculates the precision and recall value of the real and generated images. These functions were designed by following the pseudo-code provided in Appendix A in the aforementioned [paper](https://arxiv.org/pdf/1904.06991.pdf). 
 
 ### generate_image.py 
 
@@ -33,6 +33,6 @@ In practice, however, it is not easy to provide a clear interpretation of the va
 There is no exclusive way to measure the performances of a Generative Adversarial Network that has been defined yet. However, the precision and recall calculation method provided by within this [paper](https://arxiv.org/pdf/1904.06991.pdf) shows strong promise of further developments in assessing generative models. This project tries to replicate what the improved precision and recall metric provided within the paper, and calculates the values of precision and recall using the celebA dataset. 
 
 
-## Acknowledgements and References 
+## References 
 
 * Additional Papers : https://papers.nips.cc/paper/7769-assessing-generative-models-via-precision-and-recall.pdf
