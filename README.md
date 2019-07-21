@@ -14,7 +14,7 @@ The calculate.py file returns the precision and recall values of two image sets.
 
 ### generate_image.py 
 
-The generate_image.py file generates a number of images that has been trained by a DCGAN, and returns 10000 generated images. The whole code is based on [this notebook](https://github.com/naokishibuya/deep-learning/blob/master/python/dcgan_celeba.ipynb) with several adjustments, which utilizes a DCGAN using the same celebA dataset. 
+The generate_image.py file returns 10000 generated images that has been trained by a DCGAN. The whole code is based on [this notebook](https://github.com/naokishibuya/deep-learning/blob/master/python/dcgan_celeba.ipynb) with several adjustments, which utilizes a DCGAN using the same celebA dataset. 
 
 ## Results and Analysis
 
@@ -30,7 +30,7 @@ In practice, however, it is not easy to provide a clear interpretation of the va
 
 ## Conclusion
 
-There is no one exclusive way to measure the performances of a Generative Adversarial Network that has been defined yet. However, the precision and recall calculation method provided within this [paper](https://arxiv.org/pdf/1904.06991.pdf) shows strong promise of further developments in assessing generative models. This project tries to replicate what the improved precision and recall metric provided within the paper, and calculates the values of precision and recall using the celebA dataset. 
+There is no one exclusive way to measure the performances of a Generative Adversarial Network that has been defined yet. However, the precision and recall calculation method provided within this [paper](https://arxiv.org/pdf/1904.06991.pdf) shows strong promise of further developments in assessing generative models. This project tries to replicate the improved precision and recall metric provided within the paper, and calculates the values of precision and recall using the celebA dataset. 
 
 
 ## References 
