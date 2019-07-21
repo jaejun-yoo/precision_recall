@@ -22,7 +22,7 @@ This author wanted to generate 10000 images from a DCGAN and then calculate the 
 
 By definition, precision is the fraction of the generated images that are realistic, and recall is the fraction of the training data within the manifold covered by the generator. In other words, a high precision value indicates a high quality of generated samples, and a high recall value implies that the generator can generate many realistic samples found in the "real" image distribution. 
 
-An exemplary example of illustrating precision and recall is provided by [this paper](https://arxiv.org/pdf/1711.10337.pdf), which also explores evaluation measures of a GAN. 
+An exemplary example of illustrating precision and recall using a toy dataset is provided by [this paper](https://arxiv.org/pdf/1711.10337.pdf) in Figure 2, which also explores evaluation measures of a GAN. 
 
 The precision and recall code has been repeated several times, using the first 10000 images as the "real images" and the next 10000 images as the "generated images". Overall the results return consistent  values of precision and recall : the precision value lies between 0.6 ~ 0.7, and the recall value lies between 0.5 ~ 0.6. A fairly high value of precision implies that the "generated image" set contains a high quality of images, which is expected as we are using the images of celebA as a substitute of the "generated images". A considerable recall value can be attributed to the variation within the images in celebA, as often variation within a dataset also improves recall. 
 
@@ -35,3 +35,4 @@ There is no exclusive way to measure the performances of a Generative Adversaria
 
 ## Acknowledgements and References 
 
+* Additional Papers : https://papers.nips.cc/paper/7769-assessing-generative-models-via-precision-and-recall.pdf
